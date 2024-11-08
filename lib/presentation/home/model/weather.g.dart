@@ -9,77 +9,27 @@ part of 'weather.dart';
 Weather _$WeatherFromJson(Map<String, dynamic> json) => Weather(
       stnId: json['stnId'] as String,
       tm: json['tm'] as String,
-      pa: json['pa'] as String == '-999.0' || json['pa'] as String == '-999'
-          ? 'null'
-          : json['pa'],
-      hm: json['hm'] as String == '-999.0' || json['hm'] as String == '-999'
-          ? 'null'
-          : json['hm'],
-      ta: json['ta'] as String == '-999.0' || json['ta'] as String == '-999'
-          ? 'null'
-          : json['ta'],
-      td: json['td'] as String == '-999.0' || json['td'] as String == '-999'
-          ? 'null'
-          : json['td'],
-      wd: json['wd'] as String == '-999.0' || json['wd'] as String == '-999'
-          ? 'null'
-          : json['wd'],
-      ws: json['ws'] as String == '-999.0' || json['ws'] as String == '-999'
-          ? 'null'
-          : json['ws'],
-      lat: json['lat'] as String == '-999.0' || json['lat'] as String == '-999'
-          ? 'null'
-          : json['lat'],
-      lon: json['lon'] as String == '-999.0' || json['lon'] as String == '-999'
-          ? 'null'
-          : json['lon'],
-      ps: json['ps'] as String == '-999.0' || json['ps'] as String == '-999'
-          ? 'null'
-          : json['ps'],
-      vs: json['vs'] as String == '-999.0' || json['vs'] as String == '-999'
-          ? 'null'
-          : json['vs'],
-      tca: json['tca'] as String == '-999.0' || json['tca'] as String == '-999'
-          ? 'null'
-          : json['tca'],
-      rn: json['rn'] as String == '-999.0' || json['rn'] as String == '-999'
-          ? 'null'
-          : json['rn'],
-      rnWrchHr: json['rnWrchHr'] as String == '-999.0' ||
-              json['rnWrchHr'] as String == '-999'
-          ? 'null'
-          : json['rnWrchHr'],
-      maxTa: json['maxTa'] as String == '-999.0' ||
-              json['maxTa'] as String == '-999'
-          ? 'null'
-          : json['maxTa'],
-      minTa: json['minTa'] as String == '-999.0' ||
-              json['minTa'] as String == '-999'
-          ? 'null'
-          : json['minTa'],
-      sd: json['sd'] as String == '-999.0' || json['sd'] as String == '-999'
-          ? 'null'
-          : json['sd'],
-      hr24Rn: json['hr24Rn'] as String == '-999.0' ||
-              json['hr24Rn'] as String == '-999'
-          ? 'null'
-          : json['hr24Rn'],
-      hr1Rn: json['hr1Rn'] as String == '-999.0' ||
-              json['hr1Rn'] as String == '-999'
-          ? 'null'
-          : json['hr1Rn'],
-      hr3Rn: json['hr3Rn'] as String == '-999.0' ||
-              json['hr3Rn'] as String == '-999'
-          ? 'null'
-          : json['hr3Rn'],
-      hr6Rn: json['hr6Rn'] as String == '-999.0' ||
-              json['hr6Rn'] as String == '-999'
-          ? 'null'
-          : json['hr6Rn'],
-      minCh: json['minCh'] as String == '-999.0' ||
-              json['minCh'] as String == '-999'
-          ? 'null'
-          : json['minCh'],
+      pa: json['pa'] as String,
+      hm: json['hm'] as String,
+      ta: json['ta'] as String,
+      td: json['td'] as String,
+      wd: json['wd'] as String,
+      ws: json['ws'] as String,
+      lat: json['lat'] as String,
+      lon: json['lon'] as String,
+      ps: json['ps'] as String,
+      vs: json['vs'] as String,
+      tca: json['tca'] as String,
+      rn: json['rn'] as String,
+      rnWrchHr: json['rnWrchHr'] as String,
+      maxTa: json['maxTa'] as String,
+      minTa: json['minTa'] as String,
+      sd: json['sd'] as String,
+      hr24Rn: json['hr24Rn'] as String,
+      hr1Rn: json['hr1Rn'] as String,
+      hr3Rn: json['hr3Rn'] as String,
+      hr6Rn: json['hr6Rn'] as String,
+      minCh: json['minCh'] as String,
     );
 
 Map<String, dynamic> _$WeatherToJson(Weather instance) => <String, dynamic>{

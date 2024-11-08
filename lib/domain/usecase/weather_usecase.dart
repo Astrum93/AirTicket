@@ -11,7 +11,7 @@ import 'package:airticket/presentation/home/model/weather.dart';
 // }
 
 /// UseCase를 feature 단위 class로 선언
-/// C
+/// Create
 class AddWeatherUseCase implements UseCase<void, Weather> {
   ////////////////////////////////////////////////////////////////////////////////////////////////////
   // final WeatherRemoteRepository _repository = locator();
@@ -30,7 +30,7 @@ class AddWeatherUseCase implements UseCase<void, Weather> {
   }
 }
 
-/// R
+/// Read
 class ReadWeatherUseCase implements UseCase<void, Weather> {
   final WeatherRemoteRepository _repository = WeatherRemoteRepository();
 
@@ -42,7 +42,7 @@ class ReadWeatherUseCase implements UseCase<void, Weather> {
   }
 }
 
-/// U
+/// Update
 class UpdateWeatherUseCase implements UseCase<void, Weather> {
   final WeatherRemoteRepository _repository = WeatherRemoteRepository();
 
@@ -54,14 +54,14 @@ class UpdateWeatherUseCase implements UseCase<void, Weather> {
   }
 }
 
-/// D
-class DeleteWeatherUseCase implements UseCase<void, Weather> {
+/// Delete
+class DeleteWeatherUseCase implements UseCase<void, int> {
   final WeatherRemoteRepository _repository = WeatherRemoteRepository();
 
   DeleteWeatherUseCase([WeatherRemoteRepository? repository]);
 
   @override
-  Future<void> execute(Weather params) {
+  Future<void> execute(int params) {
     return _repository.deleteWeatherList();
   }
 }
@@ -73,7 +73,7 @@ class SearchWeatherUseCase implements UseCase<void, String> {
   SearchWeatherUseCase([WeatherRemoteRepository? repository]);
 
   @override
-  Future<void> execute(String stnId) {
+  Future<List<Weather>> execute(String stnId) {
     return _repository.getSearchWeatherList(stnId);
   }
 }

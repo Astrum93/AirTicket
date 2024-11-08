@@ -8,10 +8,11 @@ class AirTicketApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          color: Colors.deepPurple,
+        appBarTheme: AppBarTheme(
+          color: Colors.deepPurple.shade100,
         ),
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

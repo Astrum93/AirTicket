@@ -22,11 +22,12 @@ class WeatherCardController extends GetxController {
 
   /// SearchWeather 가져오기
   getSearchWeather(stnId) async {
-    weatherList.value =
-        await weatherRepositoryImplements.getSearchWeatherList(stnId);
+    // weatherList.value = await weatherRepositoryImplements.getSearchWeatherList(stnId);
+    final searchWeatherList = await SearchWeatherUseCase().execute(stnId);
+    weatherList.value = searchWeatherList;
   }
 
-  removeWeather(int index) {
+  removeWeather(int index) async {
     weatherList.removeAt(index);
   }
 }
